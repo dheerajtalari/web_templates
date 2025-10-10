@@ -1,0 +1,71 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.main-container {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.form-container {
+    /* border: 2px solid blue; */
+    height: 500px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content {
+    background-color: white;
+    color: black;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.form-content > div {
+    display: none;  /* hides all features */
+}
+
+.form-content > .active {
+    display: block;  /* only active shows */
+}
+
+.action {
+    display: flex;
+    width: 100%;
+}
+
+.action-button {
+    flex: 1;
+    padding: 12px 6px;
+}
+
+
+
+label {
+    display: block;
+    margin-top: 2px;
+}
+
+input {
+    display: block;
+    margin: 4px 8px;
+}
+
+form > button {
+    margin-top: 16px;
+}
