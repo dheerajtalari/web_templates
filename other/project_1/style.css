@@ -1,0 +1,65 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    /* testing */
+    /* background-color: blue; */
+}
+
+li {
+    list-style: none;
+    display: inline;
+}
+
+p {
+    margin: 0;
+}
+
+
+.calender-container {
+    display: grid;
+    padding: 20px;
+
+    /* grid properties */
+    grid-template-columns: repeat(2, minmax(150px, 200px));
+    grid-auto-rows: max-content;
+    place-content: center;
+    gap: 12px;
+}
+
+.calender {
+    display: flex;
+    text-align: center;
+
+    /* flex box properties */
+    flex-direction: column;
+    align-items: stretch;
+
+
+    /* remove later */
+    background-color: peachpuff;
+}
+
+.weekdays {
+    display: grid;
+    padding: 0;
+    margin: 0;
+
+    
+    /* grid properties */
+    grid-template-columns: repeat(7, 1fr);
+}
+
+
+.days {
+    display: grid;
+    padding: 0;
+    margin: 0;
+
+    /* grid properties */
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    place-content: center;
+    
+}
