@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: peachpuff;
+    padding: 5px 10px;
+    border-radius: 20%;
+}
+
+
+/* nav bar */
+
+nav {
+    display: flex;
+    padding: 10px 20px;
+    background-color: aquamarine;
+    position: sticky;
+    top: 0px;
+
+    /* flex box properties */
+    align-items: center;
+}
+
+.logo {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.center-nav {
+    margin: 0 auto;
+    display: flex;
+
+    /* flex properties */
+    gap: 30px;
+}
+
+.auth-actions {
+    margin-left: auto;
+    display: flex;
+
+    /* flex properties */
+    gap: 10px;
+}
+
+
+/* content block */
+
+.content {
+    min-height: 100vh;
+    padding: 0 30px;
+}
+
+.section {
+    clear: both;
+    margin-bottom: 80px;
+}
+
+.section-title {
+    font-weight: 700;
+    font-size: large;
+}
+
+.image-placeholder {
+    height: 180px;
+    width: 180px;
+    background-color: lightsalmon;
+    border-radius: 10%;
+    margin: 20px 40px;
+}
+
+.left-float {
+    float: left;
+}
+
+.right-float {
+    float: right;
+}
+
+.section-para-1 {
+    margin-top: 60px;
+}
