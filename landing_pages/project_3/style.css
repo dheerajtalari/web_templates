@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* nav bar */
+
+nav {
+    display: flex;
+    max-height: 40px;
+    margin-bottom: 40px;
+    background-color: chocolate;
+
+    /* flex properties */
+    justify-content: center;
+    align-items: center;
+}
+
+nav p {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* content div */
+
+.content {
+    display: flex;
+    padding: 0 40px;
+    /* flex properties */
+    flex-direction: column;
+    gap: 100px;
+}
+
+
+/* data box */
+
+.data-box {
+    clear: both;
+}
+
+.data-box p {
+    background-color: lightgreen;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+/* card */
+.card {
+    height: 200px;
+    width: 200px;
+    background-color: whitesmoke;
+    
+}
+
+.odd {
+    box-shadow: 2px 0 2px grey inset, 0 4px 2px grey;
+    transform: rotate(-15deg);
+    float: left;
+    margin-right: 20px;
+}
+
+.even {
+    box-shadow: 2px 2px 2px grey;
+    transform: rotate(15deg);
+    float: right;
+    margin-left: 20px;
+}
+
+.card img {
+    height: 150px;
+    width: 160px;
+    padding: 10px 20px;
+}
+
