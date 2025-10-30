@@ -1,0 +1,262 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* btn container */
+
+.btn-container {
+    display: flex;
+    padding: 30px;
+    text-transform: uppercase;
+
+    /* flex properties */
+    align-items: center;
+    justify-content: center;
+}
+
+/* btn-1  */
+
+#btn-1 {
+    border: 1px solid lightgreen;
+    color: lightgreen;
+    border-radius: 2px;
+    padding: 16px 42px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+#btn-1:hover {
+    background-color: lightgreen;
+    color: white;
+}
+
+
+
+/* btn-2 */
+#btn-2 {
+    padding: 16px 42px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+    background: #FC6E51;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    letter-spacing: .08em;
+    position: relative; /* Context for the absolute ripple */
+    transition: background-color .4s linear;
+    overflow: hidden; /* Hides the ripple until it expands */
+}
+
+/* The Ripple Pseudo-Element */
+#btn-2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%); /* element aligns with center of parent */
+    background: rgba(255, 255, 255, .1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease, background-color .3s ease;
+}
+
+/* Hover State (Slight color change) (optional) */
+#btn-2:focus,
+#btn-2:hover {
+    background-color: #e65133; /* Darker shade of FC6E51 */
+}
+
+
+#btn-2:active::after {
+    /* Expands the ripple outwards */
+    width: 300px; 
+    height: 300px;
+} 
+
+
+/* btn-3 */
+
+#btn-3 {
+    padding: 16px 42px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    letter-spacing: 2px;
+    background-color: yellow;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none;
+    transition: box-shadow 0.1s linear;
+}
+
+
+#btn-3 span {
+    position: absolute;
+}
+
+#btn-3 span:nth-child(1) {
+    /* left side, btm to top */
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to top, rgba(8, 20, 43, 0), #2662d9);
+    animation: animate-left 2s linear infinite;
+}
+
+@keyframes animate-left {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+
+} 
+
+#btn-3 span:nth-child(2) {
+    /* top, left to right */
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, rgba(8, 20, 43, 0), #2662d9);
+    animation: animate-top 2s linear infinite;
+}
+
+@keyframes animate-top {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+
+} 
+
+#btn-3 span:nth-child(3) {
+    /* right, top to btm */
+    top: 0px;
+    right: 0px;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(8, 20, 43, 0), #2662d9);
+    animation: animate-right 2s infinite linear;
+}
+
+@keyframes animate-right {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+
+} 
+
+
+#btn-3 span:nth-child(4) {
+    /* bottom, righ to left */
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left, rgba(8, 20, 43, 0), #2662d9);
+    animation: animate-bottom 2s infinite linear;
+}
+
+@keyframes animate-bottom {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+
+} 
+
+
+#btn-3:active {
+    box-shadow: 5px 5px 2px grey;
+}
+
+
+/* btn-4 */
+#btn-4 {
+    text-decoration: none;
+    padding: 16px 42px;
+    border: 2px solid blue;
+    color: blue;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+#btn-4 span {
+    position: absolute;
+    bottom: 0px;
+    height: 0%;
+    background-color: blue;
+    transition: height 0.5s ease-out;
+    z-index: -1;
+}
+
+#btn-4:hover {
+    color: white;
+}
+
+#btn-4:hover span {
+    height: 100%;
+}
+
+#btn-4 span:nth-child(1) { left: 0%; width: 25%; }
+#btn-4 span:nth-child(2) { left: 25%; width: 25%; }
+#btn-4 span:nth-child(3) { left: 50%; width: 25%; }
+#btn-4 span:nth-child(4) { left: 75%; width: 25%; }
+
+
+/* btn-5 */
+
+
+#btn-5{
+    position:relative; /* servers a context for ::after */
+    display:inline-block;
+}
+
+#btn-5 a {
+    color:white;
+    font-weight:bold;
+    font-size: 12px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#FFA12B;
+    display:block;
+    position:relative;
+    padding: 16px 42px;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    border-radius: 5px;
+    
+}
+#btn-5 a:active{
+    top: 10px;
+    background-color:#F78900;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+#btn-5::after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:#2B1800;
+    border-radius: 5px;
+}
