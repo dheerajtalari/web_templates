@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container {
+    padding: 0 4px;
+    display: flex;
+
+    /* flex properties */
+    flex-wrap: wrap;
+}
+
+/* default  4 column layout */
+.column {
+    /* flex properties */
+    max-width: 25%;
+    flex: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    width: 100%;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+@media screen and (width < 400px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (400px < width < 600px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
